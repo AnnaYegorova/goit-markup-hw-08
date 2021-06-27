@@ -410,8 +410,7 @@ body {
 }
 
 .filter {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-bottom: 40px;
 }
 
 .filter__btn {
@@ -447,18 +446,43 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   margin-top: -8px;
   margin-left: -8px;
-  margin-bottom: 50px;
 }
 
 .filter__item {
   text-align: center;
   margin-top: 8px;
   margin-left: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .filter {
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter {
+    padding-bottom: 50px;
+  }
+  .filter__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1365,14 +1389,9 @@ body {
   }
 }
 
-.portfolio {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+.portfolio__img {
+  width: 100%;
+  text-align: center;
 }
 
 .portfolio__wrapper {
@@ -1403,21 +1422,12 @@ body {
           transform: translateY(0%);
 }
 
-.portfolio__item {
-  -ms-flex-preferred-size: calc((100% - 90px) / 3);
-      flex-basis: calc((100% - 90px) / 3);
-  margin-top: 30px;
-  margin-left: 30px;
+.portfolio__item:first-child {
+  margin-top: 40px;
 }
 
-.portfolio__item:hover, .portfolio__item:focus {
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  color: var(--secondary-text-color);
-}
-
-.portfolio__item:nth-child(3n) {
-  margin-right: 0px;
+.portfolio__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .portfolio__subtitle {
@@ -1454,5 +1464,76 @@ body {
 .portfolio__img-overlay {
   position: relative;
   overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: 0;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+  .portfolio__item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  .portfolio__item:hover, .portfolio__item:focus {
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    color: var(--secondary-text-color);
+  }
+  .portfolio__item:nth-child(3n) {
+    margin-right: 0px;
+  }
+  .portfolio__item:first-child {
+    margin-top: 0;
+  }
+  .portfolio__item:not(:last-child) {
+    margin-bottom: 0px;
+  }
+  .portfolio__item:nth-child(-n + 2) {
+    margin-top: 60px;
+  }
+  .portfolio__subtitle:nth-child(-n + 2) {
+    min-height: 146px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+  .portfolio__item {
+    -ms-flex-preferred-size: calc((100% - 90px) / 3);
+        flex-basis: calc((100% - 90px) / 3);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  .portfolio__item:hover, .portfolio__item:focus {
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    color: var(--secondary-text-color);
+  }
+  .portfolio__item:nth-child(3n) {
+    margin-right: 0px;
+  }
+  .portfolio__item:nth-child(3) {
+    margin-top: 60px;
+  }
+  .portfolio__subtitle:nth-child(n + 1) {
+    min-height: 109px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

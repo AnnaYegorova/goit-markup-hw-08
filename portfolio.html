@@ -23,14 +23,14 @@
 <header class="header">
     <div class="container main-container">
         <nav class="header__nav flex">
-            <a href="" class="logo" lang="en">Web
+            <a href="./index.html" class="logo" lang="en">Web
                 <span class="logo-secondpart-header">Studio</span>
             </a>
             <ul class="site-nav list">
-                <li class="site-nav__item item-studio">
+                <li class="site-nav__item ">
                     <a href="./index.html" class="site-nav__link link ">Студия</a>
                 </li>
-                <li class="site-nav__item">
+                <li class="site-nav__item item-portfolio">
                     <a href="./portfolio.html" class="site-nav__link link current">Портфолио</a>
                 </li>
                 <li class="site-nav__item">
@@ -77,7 +77,7 @@
 
             <ul class="mobile-menu__nav  list">
                 <li class="mobile-menu__item">
-                    <a href="" class="mobile-menu__link link ">Студия</a>
+                    <a href="./index.html" class="mobile-menu__link link ">Студия</a>
                 </li>
                 <li class="mobile-menu__item">
                     <a href="./portfolio.html" class="mobile-menu__link link current ">Портфолио</a>
@@ -130,7 +130,7 @@
 </header>
     <main>
         <!--Секция FILTER-->
-        <section class="section filter">
+         <section class=" section filter"> 
             <div class="container">
                 <ul class="filter__list list">
                     <li class="filter__item">
@@ -151,11 +151,27 @@
                 </ul>
                 <!-- PORTFOLIO-->
     
-                <ul class="portfolio list">
+                 <ul class="portfolio list"> 
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link link">
                             <div class="portfolio__img-overlay">
-                                <img src="./images/projects/img1.jpg" alt="Веб-сайт Технокряк" width="370">
+                                <!-- <img src="./images/projects/img1.jpg" 
+                                alt="Веб-сайт Технокряк" 
+                                width="370"> -->
+                                <img class="portfolio__img" 
+                                              srcset="
+                                                ./images/projects/img1-354.jpg 354w,
+                                                ./images/projects/img1-370.jpg 370w,
+                                                ./images/projects/img1-450.jpg 450w,
+                                                ./images/projects/img1-708.jpg 708w,
+                                                ./images/projects/img1-740.jpg 740w,
+                                                ./images/projects/img1-900.jpg 900w
+                                              " sizes="(min-width: 1200px) 354px, 
+                                              (min-width: 768px) 370px, 
+                                              (min-width: 480px) 450px, 290px "
+                                    src="./images/projects/img1-354.jpg" 
+                                    alt="Веб-сайт Технокряк" />
+
                                 <p class="portfolio__wrapper">Технокряк это современная площадка распространения
                                     коронавируса. Компании используют эту платформу для цифрового
                                     шпионажа и атак на защищённые сервера конкурентов.</p>
@@ -169,9 +185,23 @@
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link link">
                             <div class="portfolio__img-overlay">
-                                <img class="border__img" src="./images/projects/img2.jpg"
-                                    alt="Дизайн постера New Orlean vs Golden Star" width="370">
-                                <p class="portfolio__wrapper">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                <!-- <img class="border__img" src="./images/projects/img2.jpg"
+                                    alt="Дизайн постера New Orlean vs Golden Star" width="370"> -->
+                                
+                                <img class="portfolio__img"
+                                               srcset="
+                                                ./images/projects/img2-354.jpg 354w,
+                                                ./images/projects/img2-370.jpg 370w,
+                                                ./images/projects/img2-450.jpg 450w,
+                                                ./images/projects/img2-708.jpg 708w,
+                                                ./images/projects/img2-740.jpg 740w,
+                                                ./images/projects/img2-900.jpg 900w
+                                              " sizes="(min-width: 1200px) 354px, 
+                                              (min-width: 768px) 370px, 
+                                              (min-width: 480px) 450px, 290px "
+                                    src="./images/projects/img2-354.jpg" 
+                                    alt="Дизайн постера New Orlean vs Golden Star" />
+                                    <p class="portfolio__wrapper">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                     Aperiam deserunt mollitia ipsam natus necessitatibus veritatis eaque culpa, omnis
                                     delectus accusantium?</p>
                             </div>
@@ -184,9 +214,20 @@
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link link">
                             <div class="portfolio__img-overlay">
-                                <img class="border__img" src="./images/projects/img3.jpg"
-                                    alt="Приложение для Ресторана Seafood" width="370">
-                                <p class="portfolio__wrapper"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                <!-- <img class="border__img" src="./images/projects/img3.jpg"
+                                    alt="Приложение для Ресторана Seafood" width="370"> -->
+                                    <img class="portfolio__img" srcset="
+                                                ./images/projects/img3-354.jpg 354w,
+                                                ./images/projects/img3-370.jpg 370w,
+                                                ./images/projects/img3-450.jpg 450w,
+                                                ./images/projects/img3-708.jpg 708w,
+                                                ./images/projects/img3-740.jpg 740w,
+                                                ./images/projects/img3-900.jpg 900w
+                                              " sizes="(min-width: 1200px) 354px, 
+                                              (min-width: 768px) 370px, 
+                                              (min-width: 480px) 450px, 290px " src="./images/projects/img3-354.jpg"
+                                   alt="Приложение для Ресторана Seafood" />
+                                    <p class="portfolio__wrapper"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                     Aperiam deserunt mollitia ipsam natus necessitatibus
                                     veritatis eaque culpa, omnis delectus accusantium?</p>
                             </div>
@@ -199,8 +240,19 @@
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link link">
                             <div class="portfolio__img-overlay">
-                                <img class="border__img" src="./images/projects/img4.jpg" alt="Маркетинг для Проекта Prime"
-                                    width="370">
+                                <!-- <img class="border__img" src="./images/projects/img4.jpg" alt="Маркетинг для Проекта Prime"
+                                    width="370"> -->
+<img class="portfolio__img" srcset="
+                                                ./images/projects/img1-354.jpg 354w,
+                                                ./images/projects/img1-370.jpg 370w,
+                                                ./images/projects/img1-450.jpg 450w,
+                                                ./images/projects/img1-708.jpg 708w,
+                                                ./images/projects/img1-740.jpg 740w,
+                                                ./images/projects/img1-900.jpg 900w
+                                              " sizes="(min-width: 1200px) 354px, 
+                                              (min-width: 768px) 370px, 
+                                              (min-width: 480px) 450px, 290px " src="./images/projects/img1-354.jpg"
+    alt="Веб-сайт Технокряк" />
                                 <p class="portfolio__wrapper">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                     Aperiam deserunt mollitia ipsam natus necessitatibus
                                     veritatis eaque culpa, omnis delectus accusantium?</p>
@@ -214,8 +266,20 @@
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link link">
                             <div class="portfolio__img-overlay">
-                                <img class="border__img" src="./images/projects/img5.jpg" alt="Приложение для Проекта Boxes"
-                                    width="370">
+                                <!-- <img class="border__img" src="./images/projects/img5.jpg" alt="Приложение для Проекта Boxes"
+                                    width="370"> -->
+<img class="portfolio__img" srcset="
+                                                ./images/projects/img1-354.jpg 354w,
+                                                ./images/projects/img1-370.jpg 370w,
+                                                ./images/projects/img1-450.jpg 450w,
+                                                ./images/projects/img1-708.jpg 708w,
+                                                ./images/projects/img1-740.jpg 740w,
+                                                ./images/projects/img1-900.jpg 900w
+                                              " sizes="(min-width: 1200px) 354px, 
+                                              (min-width: 768px) 370px, 
+                                              (min-width: 480px) 450px, 290px " src="./images/projects/img1-354.jpg"
+    alt="Веб-сайт Технокряк" />
+                                
                                 <p class="portfolio__wrapper">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                     Aperiam deserunt mollitia ipsam natus necessitatibus
                                     veritatis eaque culpa, omnis delectus accusantium?</p>
@@ -229,9 +293,20 @@
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link link">
                             <div class="portfolio__img-overlay">
-                                <img class="border__img" src="./images/projects/img6.jpg"
-                                    alt="Веб-сайт для Inspiration has no Borders" width="370">
-                                <p class="portfolio__wrapper">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                <!-- <img class="border__img" src="./images/projects/img6.jpg"
+                                    alt="Веб-сайт для Inspiration has no Borders" width="370"> -->
+<img class="portfolio__img" srcset="
+                                                ./images/projects/img1-354.jpg 354w,
+                                                ./images/projects/img1-370.jpg 370w,
+                                                ./images/projects/img1-450.jpg 450w,
+                                                ./images/projects/img1-708.jpg 708w,
+                                                ./images/projects/img1-740.jpg 740w,
+                                                ./images/projects/img1-900.jpg 900w
+                                              " sizes="(min-width: 1200px) 354px, 
+                                              (min-width: 768px) 370px, 
+                                              (min-width: 480px) 450px, 290px " src="./images/projects/img1-354.jpg"
+    alt="Веб-сайт Технокряк" />
+                                    <p class="portfolio__wrapper">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                     Aperiam deserunt mollitia ipsam natus necessitatibus
                                     veritatis eaque culpa, omnis delectus accusantium?</p>
                             </div>
@@ -244,9 +319,21 @@
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link link">
                             <div class="portfolio__img-overlay">
-                                <img class="border__img" src="./images/projects/img7.jpg"
-                                    alt="Дизайн для Издания Limited Edition" width="370">
-                                <p class="portfolio__wrapper">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                <!-- <img class="border__img" src="./images/projects/img7.jpg"
+                                    alt="Дизайн для Издания Limited Edition" width="370"> -->
+                               
+<img class="portfolio__img" srcset="
+                                                ./images/projects/img1-354.jpg 354w,
+                                                ./images/projects/img1-370.jpg 370w,
+                                                ./images/projects/img1-450.jpg 450w,
+                                                ./images/projects/img1-708.jpg 708w,
+                                                ./images/projects/img1-740.jpg 740w,
+                                                ./images/projects/img1-900.jpg 900w
+                                              " sizes="(min-width: 1200px) 354px, 
+                                              (min-width: 768px) 370px, 
+                                              (min-width: 480px) 450px, 290px " src="./images/projects/img1-354.jpg"
+    alt="Веб-сайт Технокряк" />
+                                    <p class="portfolio__wrapper">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                     Aperiam deserunt mollitia ipsam natus necessitatibus
                                     veritatis eaque culpa, omnis delectus accusantium?</p>
                             </div>
@@ -259,8 +346,19 @@
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link link">
                             <div class="portfolio__img-overlay">
-                                <img class="border__img" src="./images/projects/img8.jpg" alt="Маркетинг для Проекта LAB"
-                                    width="370">
+                                <!-- <img class="border__img" src="./images/projects/img8.jpg" alt="Маркетинг для Проекта LAB"
+                                    width="370"> -->
+<img class="portfolio__img" srcset="
+                                                ./images/projects/img1-354.jpg 354w,
+                                                ./images/projects/img1-370.jpg 370w,
+                                                ./images/projects/img1-450.jpg 450w,
+                                                ./images/projects/img1-708.jpg 708w,
+                                                ./images/projects/img1-740.jpg 740w,
+                                                ./images/projects/img1-900.jpg 900w
+                                              " sizes="(min-width: 1200px) 354px, 
+                                              (min-width: 768px) 370px, 
+                                              (min-width: 480px) 450px, 290px " src="./images/projects/img1-354.jpg"
+    alt="Веб-сайт Технокряк" />
                                 <p class="portfolio__wrapper">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                     Aperiam deserunt mollitia ipsam natus necessitatibus
                                     veritatis eaque culpa, omnis delectus accusantium?</p>
@@ -274,9 +372,20 @@
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link link">
                             <div class="portfolio__img-overlay">
-                                <img class="border__img" src="./images/projects/img9.jpg"
-                                    alt="Приложение для Growing Business" width="370">
-                                <p class="portfolio__wrapper">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                <!-- <img class="border__img" src="./images/projects/img9.jpg"
+                                    alt="Приложение для Growing Business" width="370"> -->
+<img class="portfolio__img" srcset="
+                                                ./images/projects/img1-354.jpg 354w,
+                                                ./images/projects/img1-370.jpg 370w,
+                                                ./images/projects/img1-450.jpg 450w,
+                                                ./images/projects/img1-708.jpg 708w,
+                                                ./images/projects/img1-740.jpg 740w,
+                                                ./images/projects/img1-900.jpg 900w
+                                              " sizes="(min-width: 1200px) 354px, 
+                                              (min-width: 768px) 370px, 
+                                              (min-width: 480px) 450px, 290px " src="./images/projects/img1-354.jpg"
+    alt="Веб-сайт Технокряк" />
+                                    <p class="portfolio__wrapper">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                     Aperiam deserunt mollitia ipsam natus necessitatibus
                                     veritatis eaque culpa, omnis delectus accusantium?</p>
                             </div>
@@ -297,7 +406,7 @@
         <div class="container ">
     
             <div class="part-adress">
-                <a href="" class="logo" lang="en">Web
+                <a href="./index.html" class="logo" lang="en">Web
                     <span class="logo-secondpart-footer">Studio</span>
                 </a>
                 <address class="footer__adress">
