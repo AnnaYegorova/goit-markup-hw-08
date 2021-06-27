@@ -1,0 +1,115 @@
+@media screen and (max-width: 767px) {
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    overflow: auto;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .mobile-menu__container {
+    display: flex;
+    // direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    padding-left: 25px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .mobile-menu__close-btn {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    fill: #000;
+  }
+
+  .mobile-menu__close-icon {
+    width: 25px;
+    height: 25px;
+
+    transition: color var(--transition-duration)
+      var(--transition-timing-function);
+
+    .mobile-menu__close-btn:hover &,
+    .mobile-menu__close-btn:focus & {
+      fill: var(--accent-color);
+    }
+  }
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .mobile-menu__link {
+    @include font(500, 40px, 1.18, 0.02em);
+    color: var(--primary-text-color);
+
+    transition: color var(--transition-duration)
+      var(--transition-timing-function);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+  .mobile-menu__link.current {
+    color: var(--accent-color);
+  }
+
+  .mobile-menu__item {
+    margin-bottom: 32px;
+    &:last-child {
+      margin-bottom: 302px;
+    }
+  }
+
+  .mmcontacts-list__link {
+    @include font(500, 24px, 1.17, 0.02em);
+    color: var(--secondary-text-color);
+
+    transition: color var(--transition-duration)
+      var(--transition-timing-function);
+
+    &:hover,
+    &:focus {
+      @include font(500, 34px, 1.18, 0.02em);
+      color: var(--accent-color);
+    }
+  }
+  .mmcontacts-list__item {
+    margin-bottom: 32px;
+    &:last-child {
+      margin-bottom: 64px;
+    }
+  }
+
+  .mobile-menu__social-list {
+    display: inline-flex;
+  }
+  .mmsocial-list__item {
+    padding-right: 10px;
+    &:not(:first-child) {
+      padding-left: 10px;
+    }
+    &:not(:last-child) {
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+  }
+
+  .mmsocial-list__link {
+    color: var(--accent-color);
+    @include font(500, 18px, 1.22, 0.02em);
+  }
+}
