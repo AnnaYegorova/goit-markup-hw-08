@@ -77,13 +77,13 @@
   color: var(--accent-color);
 }
 .modal-label-field-policy span {
-  @include font(400, 14px, 1.71, 0.03em);
+  @include font(400, 12px, 1.17, 0.03em);
 
   color: var(--second-text-color);
 }
 
 .modal-link-policy {
-  @include font(400, 14px, 1.71, 0.03em);
+  @include font(400, 12px, 1.17, 0.03em);
 }
 
 .icon-policy {
@@ -92,7 +92,7 @@
   height: 15px;
   vertical-align: middle;
   cursor: pointer;
-  margin-left: 14px;
+
   margin-right: 7px;
   background-image: url("../images/for-sprite/black-box.svg");
   transition: color var(--transition-duration) var(--transition-timing-function);
@@ -111,5 +111,17 @@
     border-radius: 2px;
     border-color: var(--accent-color);
     fill: var(--accent-color);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-label-field-policy span {
+    @include font(400, 14px, 1.71, 0.03em);
+  }
+
+  .modal-link-policy {
+    @include font(400, 14px, 1.71, 0.03em);
+  }
+  .icon-policy {
+    margin-left: 14px;
   }
 }
